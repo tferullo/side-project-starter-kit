@@ -1,0 +1,18 @@
+{
+  "env": {
+    "GOOGLE_APPLICATION_CREDENTIALS": "../path-to-firebase.json",
+    "MONGO_URI": "@mongo-prod",
+    "API_URL": "@api-url"
+  },
+  "build": {
+    "env": {
+      "MONGO_URI": "@mongo-prod",
+      "API_URL": "@api-url"
+    }
+  },
+  "functions": {
+    "pages/api/**/*.js": {
+      "includeFiles": "./*-firebase-*.json"
+    }
+  }
+}
